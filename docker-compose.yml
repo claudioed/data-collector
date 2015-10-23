@@ -1,0 +1,15 @@
+postgres:
+  image: postgres:9.4.5
+  environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+  expose:
+    - "5432"
+
+application:
+  build: .
+  command: npm start
+  ports:
+    - 8080:8080
+  links:
+    - postgres

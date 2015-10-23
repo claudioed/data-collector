@@ -1,0 +1,20 @@
+{
+  "name": "data-collector",
+  "version": "1.0.0",
+  "description": "Answer collector",
+  "main": "server.js",
+  "keywords": [
+    "data",
+    "collector"
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Claudio E. de Oliveira <claudioed.oliveira@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^4.4.3",
+    "q": "^1.4.1",
+    "restify": "^4.0.3"
+  }
+}
