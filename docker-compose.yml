@@ -5,7 +5,9 @@ postgres:
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=postgres
   expose:
-    - "5432:5432"
+    - "5432"
+  ports:
+    - 5432:5432
 
 application:
   build: .
@@ -16,4 +18,4 @@ application:
     - postgres
   environment :
     - POSTGRES_PORT_5432_TCP_PORT=POSTGRES_PORT_5432_TCP_PORT
-    - POSTGRES_PORT_5432_TCP_ADDR=POSTGRES_PORT_5432_TCP_ADDR
+    - POSTGRES_PORT_5432_TCP_ADDR=POScdTGRES_PORT_5432_TCP_ADDR
