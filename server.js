@@ -5,6 +5,7 @@
 var restify = require('restify');
 var answerController = require('./server/controller/answer-controller');
 var healthCheckController = require('./server/controller/health-check-controller');
+var bootDB = require('./server/bootstrap/db');
 
 var server = restify.createServer({
     name: 'data-collector',
