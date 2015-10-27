@@ -6,12 +6,7 @@ RUN git clone https://github.com/claudioed/data-collector.git /data-collector
 
 # Set workdir
 WORKDIR /data-collector
-
-# Switch to root user
-USER root
-
-# Start postgreSQL
-CMD ["/usr/lib/postgresql/9.4.5/bin/postgres", "-D", "/var/lib/postgresql/9.4.5/main", "-c", "config_file=/etc/postgresql/9.4.5/main/postgresql.conf"]
+ADD . /data-collector
 
 # Install node dependencies
 RUN npm install
